@@ -2,7 +2,7 @@
 
 namespace SP_DomainEntities
 {
-    public class BusinessElementCommonRealized : BusinessElementCommon
+    public class BusinessElementCommonConcrete : BusinessElementCommon
     {
         public BusinessElementCommon Parent { get; set; }
         public IEnumerable<File> Files { get; set; }
