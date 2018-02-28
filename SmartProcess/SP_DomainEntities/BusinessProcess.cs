@@ -6,11 +6,11 @@ namespace SP_DomainEntities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public BusinessElementStart Start { get; set; }
-        public BusinessElementEnd End { get; set; }
-        public IEnumerable<BusinessElementCommon> BusinessElementCommons { get; set; }
-        public IEnumerable<BusinessElementChoice> BusinessElementChoices { get; set; }
-        public IEnumerable<BusinessElementTransition> BusinessElementTransitions { get; set; }
+        public BusinessElementStart StartElement { get; set; }
+        public BusinessElementEnd EndElement { get; set; }
+        public IEnumerable<BusinessElementCommon> CommonElements { get; set; }
+        public IEnumerable<BusinessElementChoice> ChoiceElements { get; set; }
+        public IEnumerable<BusinessElementTransition> TransitionElements { get; set; }
         public BusinessElement CurrentElement { get; set; }
     }
 }

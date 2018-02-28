@@ -1,6 +1,6 @@
 ﻿namespace SP_DomainEntities
 {
-    public class BusinessElementStartRealized : BusinessElementStart
+    public class BusinessElementStartConcrete : BusinessElementStart
     {
         public BusinessElementStart Parent { get; set; }
     }

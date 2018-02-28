@@ -1,7 +1,6 @@
 ﻿namespace SP_DomainEntities
 {
 
-
     public class File
     {
         public int Id { get; set; }
