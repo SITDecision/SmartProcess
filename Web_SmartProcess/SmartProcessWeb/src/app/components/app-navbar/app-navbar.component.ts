@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../modules/core/auth/authservice';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,16 @@ import { AuthService } from '../../modules/core/auth/authservice';
 })
 export class AppNavbarComponent implements OnInit {
 
+  userName: string;
+
   constructor(
-    private _auth: AuthService
-  ) { }
+    public _auth: AuthService
+  ) {
+    const vm = this;
+    vm._auth.user.subscribe(user => {
+      vm.userName = user.displayName;
+    });
+  }
 
   ngOnInit() {
   }
