@@ -1,44 +1,11 @@
-<!-- <div class="container-fluid">
-  <div class="row first-row">
-    <div class="col-md-2"></div>
-    <div class="col-md-7">
-    </div>
-    <div class="col-md-3"></div>
-  </div>
-  <div class="row second-row">
-    <div class="col-md-3"></div>
-    <div class="col-md-7">
-      <div class="row">
-        <div class="col-md-12 div-dark">
-          <div class="row">
-            <div class="col-7 mt-5" style="text-align: center">
-              <h4 style="color: white;">Sales Analysis</h4>
-            </div>
-            <div class="col-5">
-              <div class="man-logo">
-                <img src="../../../assets/images/man.png">
-              </div>
-              <div class="login-container d-flex flex-column align-items-center my-3 px-2 pb-4 pt-1">
-                <p>Go to app</p>
-                <button id="signin_btn" (click)="logIn()" class="btn btn-primary block w-100 m-b">Go In</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-2"></div>
+<div class="form-container">
+  <img src="assets/images/lock.svg" id="lock">
+
+    <span class="error" *ngIf="error">{{ error }}</span>
+
+  <button (click)="loginFb()" id="fb">Login With Facebook</button><br>
+  <button (click)="loginGoogle()" id="google">Login With Google</button>
+  <button routerLink="/login-email" id="email">Email</button>
+
+  <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
 </div>
-<div class="row third-row"></div> -->
-<!-- <div class="container">
-  <div class="starter-template">
-      <h1>Bootstrap starter template</h1>
-      <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-  </div>
-  <div class="row">
-    <div class="col-3 alert alert-danger"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iste odit quisquam illum harum, illo quaerat sit, dolores reprehenderit quidem debitis quae unde rerum labore enim mollitia amet cumque. Non.</span></div>
-    <div class="col-3"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, enim voluptatum! Ad impedit nesciunt quo, in repudiandae nemo dolorem quae. Est consequuntur aliquam, aliquid assumenda placeat dolor nemo minima ipsa.</span></div>
-    <div class="col-3"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, enim voluptatum! Ad impedit nesciunt quo, in repudiandae nemo dolorem quae. Est consequuntur aliquam, aliquid assumenda placeat dolor nemo minima ipsa.</span></div>
-  </div>
-</div> -->

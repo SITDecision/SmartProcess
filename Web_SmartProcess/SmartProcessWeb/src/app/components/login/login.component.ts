@@ -1,23 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor(private _route: Router) { }
+  error: any;
+    constructor() {
 
-  ngOnInit() {
-  }
-
-  logIn() {
-    this._route.navigateByUrl('/dashboard');
-  }
-
-  recoverPassword() {
-    this._route.navigateByUrl('/password-recovery');
+    //   this.af.auth.subscribe(auth => {
+    //   if (auth) {
+    //     this.router.navigateByUrl('/members');
+    //   }
+    // });
   }
 }
