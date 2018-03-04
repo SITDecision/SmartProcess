@@ -6,11 +6,12 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { AuthGuard } from './modules/core/authGuard/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'user-profile', pathMatch: 'full' },
-  { path: 'user-profile', component: UserProfileComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   // { path: 'signup', component: SignupComponent },
   // { path: 'login-email', component: EmailComponent },
-  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] }
+  { path: 'user-profile', component: UserProfileComponent },
+  { path: 'main', component: MainComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
