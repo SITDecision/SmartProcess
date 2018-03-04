@@ -11,7 +11,9 @@ import 'rxjs/add/operator/take';
 export class AuthGuard implements CanActivate {
   constructor(private auth: AuthService, private router: Router) {console.log('guard'); }
 
-
+  userAuthorized() {
+    if (this.auth.user) { return true; }
+  }
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | boolean {
@@ -25,6 +27,5 @@ export class AuthGuard implements CanActivate {
           this.router.navigate(['/login']);
         }
       });
-
   }
 }
