@@ -10,16 +10,25 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   error: any;
+  private defaultRoute = '/main';
 
   constructor(
-    private auth: AuthService,
+    private _auth: AuthService,
     private _route: Router
-  ) { }
+  ) {
+    const vm = this;
+    if (vm._auth.user) {
+      vm._route.navigateByUrl(vm.defaultRoute);
+    }
+  }
 
   public loginGoogle(): void {
-    this.auth.googleLogin();
-    if (this.auth.user) {
-      this._route.navigateByUrl('/main');
-    }
+    const vm = this;
+    vm._auth.googleLogin()
+      .then((success) => {
+        vm._route.navigateByUrl(vm.defaultRoute);
+      }).catch((err) => {
+        vm.error = err;
+      });
   }
 }
