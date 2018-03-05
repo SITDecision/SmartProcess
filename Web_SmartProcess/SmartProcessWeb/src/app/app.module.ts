@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from 'angularfire2';
 import { CoreModule } from './modules/core/core.module';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     LoginComponent,
     AppNavbarComponent,
     MainComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
