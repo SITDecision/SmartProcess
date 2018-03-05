@@ -1,5 +1,10 @@
 .sidebar {
     width: 240px;
+    height: 100%;
+    background: #4d5656;
+    .sidebar-header {
+        padding: 1rem 2rem;
+    }
 }
 /*override ngx-bootstrap space in sidebar*/
 :host /deep/ {
